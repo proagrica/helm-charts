@@ -34,5 +34,4 @@ By default it is turned on (`freshclam.enabled` = `true`), this will use the ima
 
 If freshclam is disabled (`freshclam.enabled` = `false`), this will use the image with signature databases included (`clamav/clamav:{{ template "chart.appVersion" . }}`) and no up dates will be made. This isn't recommended in production and provided for testing purposes.
 
-
 {{ template "helm-docs.versionFooter" . }}
