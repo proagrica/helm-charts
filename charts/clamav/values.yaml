@@ -7,7 +7,8 @@ image:
   # Overrides the image tag whose default is {{ .Chart.AppVersion }} or {{ .Chart.AppVersion }}_base depending on freshclam being enabled
   tag: ""
   pullPolicy: IfNotPresent
-  pullSecrets: []
+
+imagePullSecrets: []
 
 nameOverride: ""
 fullnameOverride: ""
@@ -25,7 +26,7 @@ podLabels: {}
 podAnnotations: {}
 
 podSecurityContext:
-  fsGroup: 101
+  fsGroup: 65534
   runAsNonRoot: true
   runAsUser: 100
   runAsGroup: 101
@@ -35,8 +36,6 @@ securityContext: {}
 #     drop:
 #       - ALL
 #   readOnlyRootFilesystem: true
-#   runAsNonRoot: true
-#   runAsUser: 1000
 
 priorityClassName: ""
 

@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "clamav.labels" . | nindent 4 }}
 data:
-  clamdcheck.sh: |
+  clamdcheck.sh: |-
     #!/usr/bin/env sh
 
     set -eu

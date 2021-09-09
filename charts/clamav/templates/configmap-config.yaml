@@ -5,13 +5,14 @@ metadata:
   labels:
     {{- include "clamav.labels" . | nindent 4 }}
 data:
-  {{- with .Values.config }}
+{{- with .Values.config }}
   clamd.conf: |-
     {{- . | nindent 4 }}
-  {{- end }}
-  {{- if .Values.freshclam.enabled }}
-  {{- with .Values.freshclam.config }}
+{{- end }}
+
+{{- if .Values.freshclam.enabled }}
+{{- with .Values.freshclam.config }}
   freshclam.conf: |-
     {{- . | nindent 4 }}
-  {{- end }}
-  {{- end }}
+{{- end }}
+{{- end }}
