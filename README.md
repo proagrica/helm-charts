@@ -11,7 +11,7 @@ These charts are provided as-is with no warranties.
 
 The following charts are present in this repo.
 
-<!-- - [ClamAV](https://www.clamav.net/) -->
+- [ClamAV](https://www.clamav.net/)
 
 ## Usage
 
