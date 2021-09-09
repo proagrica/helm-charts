@@ -1,2 +1,3 @@
+target-branch: main
 chart-repos: []
 helm-extra-args: --timeout 600s
