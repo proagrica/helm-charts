@@ -5,9 +5,13 @@ metadata:
   labels:
     {{- include "clamav.labels" . | nindent 4 }}
 spec:
-  replicas: 1
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicas }}
+  {{- end }}
+  {{- with .Values.updateStrategy }}
   strategy:
-    type: Recreate
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   selector:
     matchLabels:
       {{- include "clamav.selectorLabels" . | nindent 6 }}

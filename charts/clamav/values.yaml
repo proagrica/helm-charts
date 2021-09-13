@@ -27,6 +27,33 @@ serviceAccount:
   # -- Service account to be used. If not set and serviceAccount.create is true, a name is generated using the full name template.
   name: ""
 
+# -- Number of replicas to create if `autoscalling.enabled` is `false`.
+replicas: 1
+
+# -- Update strategy for the pod.
+updateStrategy: {}
+
+autoscaling:
+  # -- If `true`, create a HPA for the deployment.
+  enabled: false
+  # -- Minimum number of pod replicas.
+  minReplicas: 1
+  # -- Maximum number of pod replicas.
+  maxReplicas: 3
+  # -- Target CPU utilisation for the pod.
+  targetCPUUtilizationPercentage: 60
+  # -- Target memory utilisation for the pod.
+  targetMemoryUtilizationPercentage: 60
+
+# https://kubernetes.io/docs/tasks/run-application/configure-pdb/
+podDisruptionBudget:
+  # -- If `true`, create a PDB for the deployment.
+  enabled: false
+  # -- (int) Set the PDB minimum available pods.
+  minAvailable:
+  # -- (int) Set the PDB maximum unavailable pods.
+  maxUnavailable:
+
 # -- Labels to add to the pod.
 podLabels: {}
 
@@ -78,7 +105,7 @@ service:
   type: ClusterIP
   # -- Annotations to add to the service.
   annotations: {}
-  # --  	Service port.
+  # --  Service port.
   port: 3310
 
 ingress:
