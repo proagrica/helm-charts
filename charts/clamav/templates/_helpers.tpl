@@ -80,6 +80,15 @@ Create pvc name.
 {{- template "clamav.fullname" . -}}-data
 {{- end -}}
 
+{{/* Get PodDisruptionBudget API Version */}}
+{{- define "clamav.pdb.apiVersion" -}}
+  {{- if and (.Capabilities.APIVersions.Has "policy/v1") (semverCompare ">= 1.21-0" .Capabilities.KubeVersion.Version) -}}
+      {{- print "policy/v1" -}}
+  {{- else -}}
+    {{- print "policy/v1beta1" -}}
+  {{- end -}}
+{{- end -}}
+
 {{/*
 Create commands name.
 */}}

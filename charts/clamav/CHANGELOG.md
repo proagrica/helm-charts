@@ -11,6 +11,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.2.0 - 2021-09-09
+
+### Added
+
+- Added `HorizontalPodAutoscaler` and `PodDisruptionBudget`
+
+## Changed
+
+- For `Deployment` exposed `replicas` and `updateStrategy`
+
 ## v0.1.0 - 2021-09-09
 
 ### Added

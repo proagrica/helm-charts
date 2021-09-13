@@ -1,6 +1,6 @@
 # ClamAV
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.0](https://img.shields.io/badge/AppVersion-0.104.0-informational?style=flat-square)
+![Version: 0.2.0](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.0](https://img.shields.io/badge/AppVersion-0.104.0-informational?style=flat-square)
 
 [ClamAV](https://www.clamav.net/) is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
 
@@ -33,6 +33,16 @@ The following table lists the configurable parameters of the _clamav_ chart and 
 | serviceAccount.create | bool | `true` | If `true`, create a new service account. |
 | serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
 | serviceAccount.name | string | `""` | Service account to be used. If not set and serviceAccount.create is true, a name is generated using the full name template. |
+| replicas | int | `1` | Number of replicas to create if `autoscalling.enabled` is `false`. |
+| updateStrategy | object | `{}` | Update strategy for the pod. |
+| autoscaling.enabled | bool | `false` | If `true`, create a HPA for the deployment. |
+| autoscaling.minReplicas | int | `1` | Minimum number of pod replicas. |
+| autoscaling.maxReplicas | int | `3` | Maximum number of pod replicas. |
+| autoscaling.targetCPUUtilizationPercentage | int | `60` | Target CPU utilisation for the pod. |
+| autoscaling.targetMemoryUtilizationPercentage | int | `60` | Target memory utilisation for the pod. |
+| podDisruptionBudget.enabled | bool | `false` | If `true`, create a PDB for the deployment. |
+| podDisruptionBudget.minAvailable | int | `nil` | Set the PDB minimum available pods. |
+| podDisruptionBudget.maxUnavailable | int | `nil` | Set the PDB maximum unavailable pods. |
 | podLabels | object | `{}` | Labels to add to the pod. |
 | podAnnotations | object | `{}` | Annotations to add to the pod. |
 | podSecurityContext | object | see values.yaml | Security context for the pod. |
