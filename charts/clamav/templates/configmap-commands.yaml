@@ -1,3 +1,4 @@
+{{- $root := . }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -5,16 +6,7 @@ metadata:
   labels:
     {{- include "clamav.labels" . | nindent 4 }}
 data:
-  clamdcheck.sh: |-
-    #!/usr/bin/env sh
-
-    set -eu
-
-    if [ "$(echo "PING" | nc 127.0.0.1 3310)" != "PONG" ]; then
-      echo "ERROR: Unable to contact server"
-      exit 1
-    fi
-
-    echo "Clamd is up"
-
-    exit 0
+  {{- range $path, $bytes := .Files.Glob "files/*" }}
+  {{ $path | base }}: |
+    {{- $root.Files.Get $path | nindent 4 }}
+  {{- end }}

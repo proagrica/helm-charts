@@ -1,3 +1,4 @@
+{{- $root := . }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -7,12 +8,12 @@ metadata:
 data:
 {{- with .Values.config }}
   clamd.conf: |-
-    {{- . | nindent 4 }}
+    {{- (tpl . $root) | nindent 4 }}
 {{- end }}
 
 {{- if .Values.freshclam.enabled }}
 {{- with .Values.freshclam.config }}
   freshclam.conf: |-
-    {{- . | nindent 4 }}
+    {{- (tpl . $root) | nindent 4 }}
 {{- end }}
 {{- end }}

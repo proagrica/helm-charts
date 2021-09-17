@@ -11,13 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.3.0 - 2021-09-16
+
+### Changed
+
+- Freshclam init container copies cvd from base image.
+- Expose setting of `databaseDirectory`
+
 ## v0.2.0 - 2021-09-13
 
 ### Added
 
 - Added `HorizontalPodAutoscaler` and `PodDisruptionBudget`
 
-## Changed
+### Changed
 
 - For `Deployment` exposed `replicas` and `updateStrategy`
 
