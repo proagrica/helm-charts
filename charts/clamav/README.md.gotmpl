@@ -32,6 +32,6 @@ The tool `freshclam` is used to download and update ClamAV’s official virus si
 
 By default it is turned on (`freshclam.enabled` = `true`), this will use the image which doesn't include the signature databases (`clamav/clamav:{{ template "chart.appVersion" . }}_base`), will create an init container to do initial download, and secondary container to keep them up to date.
 
-If freshclam is disabled (`freshclam.enabled` = `false`), this will use the image with signature databases included (`clamav/clamav:{{ template "chart.appVersion" . }}`) and no up dates will be made. This isn't recommended in production and provided for testing purposes.
+If freshclam is disabled (`freshclam.enabled` = `false`), this will use the image with signature databases included (`clamav/clamav:{{ template "chart.appVersion" . }}`) and no up dates will be made. This isn't recommended in production and provided for testing purposes. When using this the `databaseDirectory` should be set to `/var/lib/clamav`.
 
 {{ template "helm-docs.versionFooter" . }}
