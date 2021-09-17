@@ -68,6 +68,7 @@ The following table lists the configurable parameters of the _clamav_ chart and 
 | tolerations | list | `[]` | Tolerations for pod assignment. |
 | affinity | object | `{}` | Affinity for pod assignment. |
 | env | string | `nil` | Environment variables for the clamav container. |
+| databaseDirectory | string | `"/data/clamav"` | The clamav database directory |
 | config | string | see values.yaml | The `clamd` configuration. |
 | freshclam.enabled | bool | `true` | If `true`, create a freshclam container. |
 | freshclam.securityContext | object | `{}` | Security context for the freshclam container. |

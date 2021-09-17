@@ -161,6 +161,9 @@ env:
 #   - name: VARIABLE
 #     value: my-value
 
+# -- The clamav database directory
+databaseDirectory: /data/clamav
+
 # -- The `clamd` configuration.
 # @default -- see values.yaml
 config: |-
@@ -170,6 +173,7 @@ config: |-
   TCPAddr 0.0.0.0
   User clamav
   SelfCheck 600
+  DatabaseDirectory {{ .Values.databaseDirectory }}
 
 freshclam:
   # -- If `true`, create a freshclam container.
@@ -185,3 +189,4 @@ freshclam:
     DatabaseOwner clamav
     DatabaseMirror database.clamav.net
     ScriptedUpdates yes
+    DatabaseDirectory {{ .Values.databaseDirectory }}

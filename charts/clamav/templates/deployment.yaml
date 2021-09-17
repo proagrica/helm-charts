@@ -24,6 +24,7 @@ spec:
       {{- end }}
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap-config.yaml") . | sha256sum }}
+        checksum/commands: {{ include (print $.Template.BasePath "/configmap-commands.yaml") . | sha256sum }}
       {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
@@ -47,20 +48,26 @@ spec:
           securityContext:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          image: {{ include "clamav.image" . }}
+          image: {{ include "clamav.freshclam.image" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- with .Values.env }}
           env:
+            - name: DATABASE_DIRECTORY
+              value: {{ .Values.databaseDirectory }}
+            {{- with .Values.env }}
             {{- toYaml . | nindent 12 }}
-          {{- end }}
+            {{- end }}
           command: ["/sbin/tini", "--"]
-          args: ["freshclam", "--foreground", "--stdout"]
+          args: ["freshclam-init.sh"]
           volumeMounts:
             - name: config
               mountPath: /etc/clamav/freshclam.conf
               subPath: freshclam.conf
               readOnly: true
-            - mountPath: /var/lib/clamav
+            - name: commands
+              mountPath: /usr/local/bin/freshclam-init.sh
+              subPath: freshclam-init.sh
+              readOnly: true
+            - mountPath: {{ .Values.databaseDirectory }}
               name: {{ include "clamav.pvcname" . }}
           {{- with .Values.freshclam.resources }}
           resources:
@@ -99,7 +106,7 @@ spec:
               subPath: clamdcheck.sh
               readOnly: true
             {{- if .Values.freshclam.enabled }}
-            - mountPath: /var/lib/clamav
+            - mountPath: {{ .Values.databaseDirectory }}
               name: {{ include "clamav.pvcname" . }}
             {{- end }}
           {{- with .Values.resources }}
@@ -125,7 +132,7 @@ spec:
               mountPath: /etc/clamav/freshclam.conf
               subPath: freshclam.conf
               readOnly: true
-            - mountPath: /var/lib/clamav
+            - mountPath: {{ .Values.databaseDirectory }}
               name: {{ include "clamav.pvcname" . }}
           {{- with .Values.freshclam.resources }}
           resources:
