@@ -43,7 +43,7 @@ autoscaling:
   # -- Target CPU utilisation for the pod.
   targetCPUUtilizationPercentage: 60
   # -- Target memory utilisation for the pod.
-  targetMemoryUtilizationPercentage: 60
+  targetMemoryUtilizationPercentage:
 
 # https://kubernetes.io/docs/tasks/run-application/configure-pdb/
 podDisruptionBudget:

@@ -1,6 +1,6 @@
 # ClamAV
 
-![Version: 0.3.0](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.0](https://img.shields.io/badge/AppVersion-0.104.0-informational?style=flat-square)
+![Version: 0.4.0](https://img.shields.io/badge/Version-0.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.0](https://img.shields.io/badge/AppVersion-0.104.0-informational?style=flat-square)
 
 [ClamAV](https://www.clamav.net/) is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
 
@@ -39,7 +39,7 @@ The following table lists the configurable parameters of the _clamav_ chart and 
 | autoscaling.minReplicas | int | `1` | Minimum number of pod replicas. |
 | autoscaling.maxReplicas | int | `3` | Maximum number of pod replicas. |
 | autoscaling.targetCPUUtilizationPercentage | int | `60` | Target CPU utilisation for the pod. |
-| autoscaling.targetMemoryUtilizationPercentage | int | `60` | Target memory utilisation for the pod. |
+| autoscaling.targetMemoryUtilizationPercentage | string | `nil` | Target memory utilisation for the pod. |
 | podDisruptionBudget.enabled | bool | `false` | If `true`, create a PDB for the deployment. |
 | podDisruptionBudget.minAvailable | int | `nil` | Set the PDB minimum available pods. |
 | podDisruptionBudget.maxUnavailable | int | `nil` | Set the PDB maximum unavailable pods. |
