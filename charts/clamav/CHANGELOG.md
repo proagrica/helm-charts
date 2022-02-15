@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.5.0 - 2022-02-15
+
+### Changed
+
+- Update the _ClamAV_ image version to 0.104.2
+
 ## v0.4.0 - 2021-09-17
 
 ### Changed
