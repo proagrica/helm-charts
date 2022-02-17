@@ -1,6 +1,6 @@
 # ClamAV
 
-![Version: 0.5.0](https://img.shields.io/badge/Version-0.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.2](https://img.shields.io/badge/AppVersion-0.104.2-informational?style=flat-square)
+![Version: 0.6.0](https://img.shields.io/badge/Version-0.6.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.104.2](https://img.shields.io/badge/AppVersion-0.104.2-informational?style=flat-square)
 
 [ClamAV](https://www.clamav.net/) is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
 
@@ -70,6 +70,7 @@ The following table lists the configurable parameters of the _clamav_ chart and 
 | env | string | `nil` | Environment variables for the clamav container. |
 | databaseDirectory | string | `"/data/clamav"` | The clamav database directory |
 | config | string | see values.yaml | The `clamd` configuration. |
+| yaraRules | list | `[]` | The yara rules to be added database directory, see values.yaml |
 | freshclam.enabled | bool | `true` | If `true`, create a freshclam container. |
 | freshclam.securityContext | object | `{}` | Security context for the freshclam container. |
 | freshclam.resources | object | `{}` | Resource requests and limits for the freshclam container. |

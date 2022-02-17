@@ -109,3 +109,10 @@ Create config name.
 {{- define "clamav.configname" -}}
 {{- template "clamav.fullname" . -}}-config
 {{- end -}}
+
+{{/*
+Create commands name.
+*/}}
+{{- define "clamav.yararulesname" -}}
+{{- template "clamav.fullname" . -}}-yara-rules
+{{- end -}}
