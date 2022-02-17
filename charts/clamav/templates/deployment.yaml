@@ -105,6 +105,14 @@ spec:
               mountPath: /usr/local/bin/clamdcheck.sh
               subPath: clamdcheck.sh
               readOnly: true
+            {{ if gt (len .Values.yaraRules) 0 }}
+            {{- range .Values.yaraRules }}
+            - name: yararules
+              mountPath: {{ printf "%s/yara_%s.yar" $.Values.databaseDirectory .name }}
+              subPath: {{ .name }}
+              readOnly: true
+            {{- end }}
+            {{- end }}
             {{- if .Values.freshclam.enabled }}
             - mountPath: {{ .Values.databaseDirectory }}
               name: {{ include "clamav.pvcname" . }}
@@ -148,6 +156,12 @@ spec:
           configMap:
             name: {{ template "clamav.commandsname" . }}
             defaultMode: 0777
+        {{ if gt (len .Values.yaraRules) 0 }}
+        - name: yararules
+          configMap:
+            name: {{ template "clamav.yararulesname" . }}
+            defaultMode: 0755
+        {{- end }}
         {{- if .Values.freshclam.enabled }}
         - name: {{ include "clamav.pvcname" . }}
           {{- if .Values.persistence.enabled }}
