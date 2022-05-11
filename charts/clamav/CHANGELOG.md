@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.7.0 - 2022-02-15
+
+### Changed
+
+- Update the _ClamAV_ image version to 0.105.0
+
+## v0.6.0 - 2022-02-17
+
+### Added
+
+- Add the ability to set yara rules
+
 ## v0.5.0 - 2022-02-15
 
 ### Changed
