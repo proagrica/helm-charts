@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.8.0 - 2022-06-03
+
+### Changed
+
+- Change _ClamAV_ logo location.
+
 ## v0.7.0 - 2022-02-15
 
 ### Changed
