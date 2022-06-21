@@ -1,6 +1,6 @@
 # Proagrica Helm Charts
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Pipeline Status](https://github.com/proagrica/helm-charts/workflows/Release%20Charts/badge.svg?branch=main)](https://github.com/proagrica/helm-charts/actions) [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/proagrica)](https://artifacthub.io/packages/search?repo=proagrica)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Pipeline Status](https://github.com/proagrica/helm-charts/workflows/Release%20Charts/badge.svg?branch=main)](https://github.com/proagrica/helm-charts/actions)
 
 These charts are provided as-is with no warranties.
 
