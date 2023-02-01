@@ -162,4 +162,31 @@ entries:
     urls:
     - https://github.com/proagrica/helm-charts/releases/download/clamav-0.1.0/clamav-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-11T14:59:28.490189398Z"
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.10
+    created: "2023-02-01T16:47:18.412427059Z"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 2b72b7d91d66d46e30fade543d291f7b4510f3cb06736aee462adec5d29098d3
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - https://github.com/proagrica/helm-charts/releases/download/influxdb-4.12.0/influxdb-4.12.0.tgz
+    version: 4.12.0
+generated: "2023-02-01T16:47:18.412443058Z"
