@@ -2,8 +2,8 @@ apiVersion: v2
 name: clamav
 description: Helm chart for ClamAV.
 type: application
-version: 0.7.0
-appVersion: 0.105.0
+version: 0.8.0
+appVersion: 0.105.2
 keywords:
   - clamav
   - virus
@@ -15,5 +15,5 @@ sources:
   - https://hub.docker.com/r/clamav/clamav
   - https://github.com/proagrica/helm-charts/
 maintainers:
-  - name: mcwarman
-    email: matthew.warman@proagrica.com
+  - name: secarar
+    email: robert.secara@proagrica.com
