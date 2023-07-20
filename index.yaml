@@ -3,6 +3,29 @@ entries:
   clamav:
   - apiVersion: v2
     appVersion: 0.105.2
+    created: "2023-07-20T15:48:56.803075863Z"
+    description: Helm chart for ClamAV.
+    digest: 3eef83316815469a815a5aae5e5edf8dce77db09f490145956d90888a5088d30
+    home: https://www.clamav.net/
+    icon: https://www.clamav.net/assets/clamav-trademark.png
+    keywords:
+    - clamav
+    - virus
+    - scanning
+    maintainers:
+    - email: robert.secara@proagrica.com
+      name: secarar
+    name: clamav
+    sources:
+    - https://github.com/Cisco-Talos/clamav
+    - https://hub.docker.com/r/clamav/clamav
+    - https://github.com/proagrica/helm-charts/
+    type: application
+    urls:
+    - https://github.com/proagrica/helm-charts/releases/download/clamav-0.9.0/clamav-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
+    appVersion: 0.105.2
     created: "2023-03-22T16:45:57.691076417Z"
     description: Helm chart for ClamAV.
     digest: 20307ac8036a75e8afabc709582e4cbdd78b496c6b82f8d6852b701169152645
@@ -212,4 +235,4 @@ entries:
     urls:
     - https://github.com/proagrica/helm-charts/releases/download/influxdb-4.12.0/influxdb-4.12.0.tgz
     version: 4.12.0
-generated: "2023-03-22T16:45:57.691242515Z"
+generated: "2023-07-20T15:48:56.803103563Z"
