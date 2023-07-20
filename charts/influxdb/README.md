@@ -1,5 +1,7 @@
 # InfluxDB Helm chart
 
+![Version: 5.0.0](https://img.shields.io/badge/Version-5.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.8.10](https://img.shields.io/badge/AppVersion-1.8.10-informational?style=flat-square)
+
 [InfluxDB](https://github.com/influxdata/influxdb) is an open source time series database with no external dependencies. It's useful for recording metrics, events, and performing analytics.
 
 The InfluxDB Helm chart uses the [Helm](https://helm.sh) package manager to bootstrap an InfluxDB StatefulSet and service on a [Kubernetes](http://kubernetes.io) cluster.
