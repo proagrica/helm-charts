@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.10.0 - 2023-08-18
+
+### Changed
+
+- Update yml format of specifying the Average utilization target inside hpa.yaml
+
 ## v0.9.0 - 2023-07-19
 
 ### Changed
