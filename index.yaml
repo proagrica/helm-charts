@@ -3,6 +3,31 @@ entries:
   clamav:
   - apiVersion: v2
     appVersion: 0.105.2
+    created: "2023-08-18T16:42:59.14715873Z"
+    description: Helm chart for ClamAV.
+    digest: ef6f4427a5c565b79cff165cfa45e5b57c92543e4488608ca3ce56d415874af1
+    home: https://www.clamav.net/
+    icon: https://www.clamav.net/assets/clamav-trademark.png
+    keywords:
+    - clamav
+    - virus
+    - scanning
+    maintainers:
+    - email: scott.wise@proagrica.com
+      name: wiseman13
+    - email: robert.secara@proagrica.com
+      name: secarar
+    name: clamav
+    sources:
+    - https://github.com/Cisco-Talos/clamav
+    - https://hub.docker.com/r/clamav/clamav
+    - https://github.com/proagrica/helm-charts/
+    type: application
+    urls:
+    - https://github.com/proagrica/helm-charts/releases/download/clamav-0.10.0/clamav-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: 0.105.2
     created: "2023-07-20T15:48:56.803075863Z"
     description: Helm chart for ClamAV.
     digest: 3eef83316815469a815a5aae5e5edf8dce77db09f490145956d90888a5088d30
@@ -211,6 +236,28 @@ entries:
   influxdb:
   - apiVersion: v1
     appVersion: 1.8.10
+    created: "2023-08-18T16:42:59.390310218Z"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: fc89aa2e7717f4c039b43672c3b1771160955f5b5d3c5a929c298b93bc7714e3
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: scott.wise@proagrica.com
+      name: wiseman13
+    - email: robert.secara@proagrica.com
+      name: secarar
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - https://github.com/proagrica/helm-charts/releases/download/influxdb-5.0.0/influxdb-5.0.0.tgz
+    version: 5.0.0
+  - apiVersion: v1
+    appVersion: 1.8.10
     created: "2023-02-01T16:47:18.412427059Z"
     description: Scalable datastore for metrics, events, and real-time analytics.
     digest: 2b72b7d91d66d46e30fade543d291f7b4510f3cb06736aee462adec5d29098d3
@@ -235,4 +282,4 @@ entries:
     urls:
     - https://github.com/proagrica/helm-charts/releases/download/influxdb-4.12.0/influxdb-4.12.0.tgz
     version: 4.12.0
-generated: "2023-07-20T15:48:56.803103563Z"
+generated: "2023-08-18T16:42:59.39052102Z"
