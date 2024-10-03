@@ -11,6 +11,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 ### Removed -->
 
+## v0.14.0 - 2024-04-02
+
+### Changed
+
+- Changed service ports
+
+## v0.13.0 - 2023-10-31
+
+### Changed
+
+- Service port number update
+
+## v0.12.0 - 2023-10-30
+
+### Changed
+
+- Port name update inline with [Requirements for Pods and Services](https://istio.io/v1.0/docs/setup/kubernetes/spec-requirements/)
+
+## v0.11.0 - 2023-10-12
+
+### Changed
+
+- Move ClamAV Helm Chart inside dedicated Terraform module
+
 ## v0.10.0 - 2023-08-18
 
 ### Changed

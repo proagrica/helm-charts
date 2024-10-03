@@ -14,6 +14,6 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: 3310
       protocol: TCP
-      name: clamd
+      name: tcp-clamavd
   selector:
     {{- include "clamav.selectorLabels" . | nindent 4 }}
