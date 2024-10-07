@@ -89,7 +89,10 @@ spec:
           command: ["/sbin/tini", "--"]
           args: ["clamd", "--foreground"]
           ports:
-            - name: clamavd
+            - name: tcp-clamavd
+              containerPort: 3310
+              protocol: TCP
+            - name: http-clamavd
               containerPort: 3310
               protocol: TCP
           livenessProbe:
